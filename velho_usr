@@ -1,0 +1,21 @@
+{% extends 'index.html' %'}
+{% block main %}
+{{ super() }}
+<h1>usuários</h1>
+					<table>
+					<tr>
+					<th>Nome</th>
+					<th>E-mail</th>
+					<tr>
+					{% for u in usuarios %}
+					<tr>
+					<td>{{u.nome}}</b> - {{u.email}}</td>
+					{% endfor %}
+					</tr>
+					{% endfor %}
+					{% if not usuarios %}
+					<tr>
+					<td colspan="2" style="text-align:center">Nenhum usuário encontrado</td>
+					</tr>
+					{% endif %}
+					<table>
